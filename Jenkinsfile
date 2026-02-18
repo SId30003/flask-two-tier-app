@@ -2,12 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone') {
-            steps {
-                git 'https://github.com/SId30003/flask-two-tier-app'
-            }
-        }
-
         stage('Build Image') {
             steps {
                 sh 'docker build -t flask-app .'
@@ -28,4 +22,3 @@ pipeline {
         }
     }
 }
-
