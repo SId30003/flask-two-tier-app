@@ -1,14 +1,22 @@
 pipeline {
     agent any
+
     stages {
-        stage('Build Docker Image') {
+        stage('Clone Repo') {
             steps {
-                sh 'docker build -t flask-app .'
+                git 'YOUR_GITHUB_REPO_URL'
             }
         }
-        stage('Run Docker Container') {
+
+        stage('Stop Old Containers') {
             steps {
-                sh 'docker run -d -p 5000:5000 flask-app'
+                sh 'docker-compose down || true'
+            }
+        }
+
+        stage('Build & Run') {
+            steps {
+                sh 'docker-compose up -d --build'
             }
         }
     }
