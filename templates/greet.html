@@ -1,16 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Greeting</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-<body style="text-align:center; margin-top:100px; font-family:Arial;">
 
-    <h1>👋 Hello, {{ name }}!</h1>
-    <h2>🔥 Flask app is working perfectly!</h2>
+<body>
 
-    <h2>Implementation for a CICD Pipeline (Demo App)</h2>
+    <div class="container">
+        <h1>🎉 Hello, {{ name }}!</h1>
+        <p>Your Flask CI/CD pipeline is working perfectly 🚀</p>
 
-    <a href="/">Go Back</a>
+        <a href="/">
+            <button>Go Back</button>
+        </a>
+    </div>
 
 </body>
 </html>
