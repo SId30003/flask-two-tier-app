@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git 'https://github.com/SId30003'
+                git 'https://github.com/SId30003/flask-two-tier-app'
             }
         }
 
