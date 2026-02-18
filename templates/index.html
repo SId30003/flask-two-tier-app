@@ -1,20 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Flask App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask CI/CD App</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+
 <body>
 
-    <h1>🚀 Flask CI/CD App</h1>
-    <p>Enter your name:</p>
+    <div class="container">
+        <h1>🚀 Flask CI/CD App</h1>
+        <p>Enter your name below 👇</p>
 
-    <form action="/greet" method="POST">
-        <input type="text" name="name" placeholder="Your name" required>
-        <br><br>
-        <button type="submit">Submit</button>
-    </form>
+        <form action="/greet" method="POST">
+            <input type="text" name="name" placeholder="Your name" required>
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 
 </body>
 </html>
-
